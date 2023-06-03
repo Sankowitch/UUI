@@ -1,0 +1,9 @@
+odi cmd u folder di je autograder.pz i runnaj komadnu "python autograder.py lab3",
+ rijesenje je u solutions/jmbag u txt fileu autograder.txt
+s tim da jmbag.zip mora biti u solutionsd/jmnag folderu isto
+
+
+cd cd C:\Users\brayo\OneDrive\Desktop\FAKS\UUUI\LABOSI\autograder\data\lab3\templates\lab3java
+
+
+C:\Users\brayo\OneDrive\Desktop\FAKS\UUUI\LABOSI\autograder\data\lab3\files

@@ -1,0 +1,7 @@
+ java -cp target/classes ui.Solution resolution resolution_examples/small_example.txt
+java -cp target/classes ui.Solution resolution C:\Users\brayo\OneDrive\Desktop\FAKS\UUUI\LABOSI\autograder\data\lab2\files\moja.txt
+
+
+
+java -cp target/classes ui.Solution cooking C:\Users\brayo\OneDrive\Desktop\FAKS\UUUI\LABOSI\autograder\data\lab2\files\cooking_coffee.txt C:\Users\brayo\OneDrive\Desktop\FAKS\UUUI\LABOSI\autograder\data\lab2\files\cooking_coffee_input.txt
+

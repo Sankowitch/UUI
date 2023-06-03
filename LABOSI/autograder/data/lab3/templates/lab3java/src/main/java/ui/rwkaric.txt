@@ -1,0 +1,15 @@
+C:\Users\brayo\OneDrive\Desktop\FAKS\UUUI\LABOSI\autograder[1]\autograder\data\lab3\files
+
+
+java -cp target/classes ui.Solution C:\Users\brayo\OneDrive\Desktop\FAKS\UUUI\LABOSI\autograder\data\lab3\files\volleyball.cvs datasets/volleyball_test.csv 1
+
+
+java -cp target/classes ui.Solution C:\Users\brayo\OneDrive\Desktop\FAKS\UUUI\LABOSI\autograder\data\lab3\files\volleyball.csv C:\Users\brayo\OneDrive\Desktop\FAKS\UUUI\LABOSI\autograder\data\lab3\files\volleyball_test.csv 1
+
+helldout_logic_f2_train
+helldout_logic_f3_train
+helldout_logic_f4_train
+
+ALL TESTS
+
+java -cp target/classes ui.Solution C:\Users\brayo\OneDrive\Desktop\FAKS\UUUI\LABOSI\autograder\data\lab3\files\heldout_logic_f2_train.csv C:\Users\brayo\OneDrive\Desktop\FAKS\UUUI\LABOSI\autograder\data\lab3\files\heldout_logic_f2_test.csv 1

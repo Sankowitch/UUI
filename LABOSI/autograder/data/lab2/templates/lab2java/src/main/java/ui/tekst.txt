@@ -1,0 +1,86 @@
+		//cooking
+		if (cooking == true) {
+		    allClausesCopy.addAll(allClauses);
+			setOfSupportCopy.addAll(setOfSupport);
+			
+			//treba procitati iz putanje 2
+			try {
+			    File myObj = new File(putanjaInput);
+			    Scanner myReader = new Scanner(myObj, "utf-8");
+				while (myReader.hasNextLine()) {
+					boolean upitnik = false;
+				    boolean plus = false;
+				    boolean minus = false;
+                    String ulaz = myReader.nextLine();
+					ulaz =  ulaz.toLowerCase();
+					System.out.println("User's command: " + ulaz);
+					String ivan="";  //ponestaju mi imena
+					if (ulaz.contains("?")) {
+                        upitnik = true;
+						ivan = ulaz.replaceAll("\\?", "");
+					} if (ulaz.contains("-")) {
+						minus = true;
+                        ivan = ulaz.replaceAll("\\-", "");
+					} if (ulaz.contains("+")) {
+                        plus = true;
+						ivan = ulaz.replaceAll("\\+", "");
+					}
+					ivan=ivan.substring(0, ivan.length() - 1);  //micem onaj zadnji razmak 
+					String[] pomoc = ivan.split(" v ");
+					TreeSet<String> klauz = new TreeSet<>();
+					for (String s :  pomoc) {
+						s = s.replaceAll("\\s", "");
+						if (upitnik == true) {
+						    if (s.contains("~") ) {
+							    s= s.replaceAll("~" , "");
+						     } else {
+							    s= "~" +  s;
+						    } 
+					    }
+						klauz.add(s);
+						nasliNil = false;
+						roditelji.clear();
+						
+                        
+						if (upitnik == true) {
+							setOfSupport.add(klauz);
+							pocetnaZaP.add(s);
+						    konacno.addAll(klauz);
+					        resolution();
+							printanje(pocetnaZaP, ivan, cooking);
+							
+							allClauses.clear();
+							setOfSupport.clear();
+							pocetnaZaP.remove(s);
+							konacno.removeAll(klauz);
+						    allClauses.addAll(allClausesCopy);
+							setOfSupport.addAll(setOfSupportCopy);
+							//printajSetSet(setOfSupport);
+						} if (minus == true) {
+						    setOfSupport.remove(klauz);
+							allClauses.remove(klauz);
+							setOfSupportCopy.remove(klauz);
+							allClausesCopy.remove(klauz);
+							konacno.removeAll(klauz);
+							pocetnaZaP.remove(s);
+							System.out.println("removed " + ivan);
+							
+						} if (plus == true) {
+							setOfSupport.add(klauz);
+                            allClauses.add(klauz);
+							setOfSupportCopy.add(klauz);
+							allClausesCopy.add(klauz);
+							System.out.println("Added " + ivan);
+							
+						}
+					
+					}
+				}				
+
+			    myReader.close();
+
+
+		    } catch (FileNotFoundException e) {
+			    System.out.println("KOJI F U CHATU.");
+			    e.printStackTrace();
+		    }
